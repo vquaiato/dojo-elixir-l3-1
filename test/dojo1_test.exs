@@ -3,13 +3,14 @@ defmodule Dojo1Test do
   doctest Dojo1
   import Dojo1
 
-  test "numero 0 nao é primo", do: assert is_prime?(0) == false
-  test "numero 1 nao é primo", do: assert is_prime?(1) == false
-  test "numero 2 tem que ser primo", do: assert is_prime?(2)
-  test "numero 3 tem que ser primo", do: assert is_prime?(3)
-  test "numero 4 nao é primo", do: assert is_prime?(4) == false
-  test "numero 20 não é primo", do: assert is_prime?(20) == false
+  test "numero 0 nao é primo", do: refute is_prime?(0)
+  test "numero 1 nao é primo", do: refute is_prime?(1)
+  test "numero 4 nao é primo", do: refute is_prime?(4)
+  test "numero 20 não é primo", do: refute is_prime?(20)
+  test "numero 2 é primo", do: assert is_prime?(2)
+  test "numero 3 é primo", do: assert is_prime?(3)
   test "numero 23 é primo", do: assert is_prime?(23)
+
   test "numero de a é 1", do: assert (numero_palavra "a") == 1
   test "numero de b é 2", do: assert (numero_palavra "b") == 2
   test "numero de A é 27", do: assert (numero_palavra "A") == 27
@@ -18,10 +19,11 @@ defmodule Dojo1Test do
   test "soma de banana tem que ser 33", do: assert (numero_palavra "banana") == 33
   test "soma de banana tem que ser 195", do: assert (numero_palavra "BANANA") == 189
   test "soma de vinicius tem que ser 106", do: assert (numero_palavra "vinicius") == 106
-  test "banana não é prima", do: assert (palavra_prima? "banana") == false
+
+  test "banana não é prima", do: refute (palavra_prima? "banana")
   test "g é prima", do: assert (palavra_prima? "g")
   test "gac é prima", do: assert (palavra_prima? "gac")
   test "ga  c é prima", do: assert (palavra_prima? "ga  c")
-  test "vinicius não é prima", do: assert (palavra_prima? "vinicius") == false
+  test "vinicius não é prima", do: refute (palavra_prima? "vinicius")
   test "a vinicius é prima", do: assert (palavra_prima? "a vinicius")
 end
