@@ -6,8 +6,8 @@ defmodule Dojo1 do
     defp is_prime?(_, 1), do: true
     defp is_prime?(n, start) do
         case rem(n, start) do 
-        0 -> false
-        _ -> is_prime?(n, start-1)
+            0 -> false
+            _ -> is_prime?(n, start-1)
         end
     end
     
