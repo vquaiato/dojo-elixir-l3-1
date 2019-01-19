@@ -1,6 +1,6 @@
-#First Elixir Dojo held in Lambda3
+# First Elixir Dojo held in Lambda3
 
-##Problem
+## Problem
 Find if a word is prime or not. To calculate that, use:
 a = 1
 b = 2
